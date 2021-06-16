@@ -9,79 +9,78 @@ nctl-assets-setup && nctl-start
 # Step 0.2: Await for network to spinup.
 nctl-view-chain-state-root-hash 
 
-# Step 0.3: Display system account information - note defaults.
-aibc-2021-view-account-A
-aibc-2021-view-account-B
-aibc-2021-view-account-C
-aibc-2021-view-account-D
+# Step 0.3: Display accounts.
+aibc-2021-view-accounts
 
 # ---------------------------------------------------------------------------
-# Step 01: Install kv-storage.wasm contract.
+# Step 01: Set document checksum + metadata.
 # ---------------------------------------------------------------------------
 
-# Step 01.1: Install kv-storage.wasm contract.
-aibc-2021-step-01-set-contract
+# Step 01.1: Set document checksum.
+aibc-2021-step-1-set-document-checksum
 
-# Step 01.2: Display system account information - note updated named keys.
-aibc-2021-view-account-A
-
-# Step 01.3: Set contract hash for later - note see database.
-aibc-2021-step-01-set-contract-hash
+# Step 01.2: Set document metadata.
+aibc-2021-step-1-set-document-metadata
 
 # ---------------------------------------------------------------------------
-# Step 02: Set associated keys.
+# Step 02: Set associated keys / action thresholds.
 # ---------------------------------------------------------------------------
 
-# Step 02.1: Set system account key weights.
-aibc-2021-step-02-set-associated-keys
+# Step 02.1: Set system account key weights - wait until pending deploys = 0.
+aibc-2021-step-2-set-key-weights
 
-# Step 02.2: Display system account information - note updated key weights.
-aibc-2021-view-account-A
+# Step 02.2: Set system account action thresholds - wait until pending deploys = 0.
+aibc-2021-step-2-set-action-thresholds
 
-# ---------------------------------------------------------------------------
-# Step 03: Set action thresholds.
-# ---------------------------------------------------------------------------
-
-# Step 03.1: Set system account action thresholds.
-aibc-2021-step-03-set-action-thresholds
-
-# Step 03.2: Display system account information - note updated action thresholds.
-aibc-2021-view-account-A
+# Step 02.3: Display system account information - note updated key weights.
+aibc-2021-view-account-a
 
 # ---------------------------------------------------------------------------
-# Step 04: Set document checksum + metadata.
+# Step 03: Install kv_storage.wasm contract.
 # ---------------------------------------------------------------------------
 
-# Step 04.1: Display test document.
-aibc-2021-step-04-view-document
+# Step 03.1: Install kv_storage.wasm contract - wait until pending deploys = 0.
+aibc-2021-step-3-set-contract
 
-# Step 04.2: Set document checksum.
-aibc-2021-step-04-set-document-checksum
+# Step 03.2: Set contract hash memo.
+aibc-2021-step-3-set-contract-hash
 
-# Step 04.3: Set document metadata.
-aibc-2021-step-04-set-document-metadata
+# Step 03.3: Display system account information - note updated named keys.
+aibc-2021-view-account-a
+
+# Step 03.4: Display contract information - note empty named keys.
+aibc-2021-view-contract-state
 
 # ---------------------------------------------------------------------------
-# Step 05: Set deploy with multiple-signatures.
+# Step 04: Set notarisations with multiple-signatures.
 # ---------------------------------------------------------------------------
 
-# Step 05.1: Set deploy 1 - display file deploy-1.json with user 1 approval: weight = 5.
-aibc-2021-step-05-set-deploy-1
+# Step 04.1: Set notarisation 1 - display file notarisation-1.json with user 1 approval: weight = 5.
+aibc-2021-step-4-set-notarisation-1
+aibc-2021-view-notarisation-1
 
-# Step 05.2: Set deploy 2 - display file deploy-2.json with user 2 approval: weight = 15.
-aibc-2021-step-05-set-deploy-2
+# Step 04.2: Set notarisation 2 - display file notarisation-2.json with user 2 approval: weight = 15.
+aibc-2021-step-4-set-notarisation-2
+aibc-2021-view-notarisation-2
 
-# Step 05.3: Set deploy 3 - display file deploy-3.json with user 3 approval: weight = 30.
-aibc-2021-step-05-set-deploy-3
+# Step 04.3: Set notarisation 3 - display file notarisation-3.json with user 3 approval: weight = 30.
+aibc-2021-step-4-set-notarisation-3
+aibc-2021-view-notarisation-3
 
-# Step 05.4: Dispatch deploy
-# OPEN T3
-aibc-2021-step-05-dispatch-deploy
+# ---------------------------------------------------------------------------
+# Step 05: Dispatch notarisation to chain.
+# ---------------------------------------------------------------------------
+
+# Step 05.1: Dispatch notarisation.
+aibc-2021-step-5-dispatch-notarisation-1
 
 # ---------------------------------------------------------------------------
 # Step 06: Verify on-chain metadata.
 # ---------------------------------------------------------------------------
 
-# Step 06.1: View document metadata & verify.
-aibc-2021-step-06-verify
+# Step 06.1: Display contract information - note named keys.
+aibc-2021-view-contract-state | jq '.result.stored_value.Contract.named_keys'
+
+# Step 06.2: View document metadata & verify.
+aibc-2021-step-6-verify-metadata
 ```

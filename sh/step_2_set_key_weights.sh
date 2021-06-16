@@ -1,4 +1,4 @@
-_NODE_ADDRESS=$(get_node_address_rpc)
+_NODE_ADDRESS=$(get_node_address_rpc node="1")
 _PATH_TO_CLIENT=$(get_path_to_client)
 _SYSTEM_SECRET_KEY=$(get_path_to_secret_key "$NCTL_ACCOUNT_TYPE_FAUCET")
 _SYSTEM_ACCOUNT_KEY=$(get_account_key "$NCTL_ACCOUNT_TYPE_FAUCET")
@@ -8,8 +8,8 @@ _SYSTEM_ACCOUNT_HASH=$(get_account_hash "$_SYSTEM_ACCOUNT_KEY")
 function _set_key_weight_of_system()
 {
     local WEIGHT=${1}
-    local PATH_TO_CONTRACT="$_PATH_TO_DEMO/assets/contract-keys-manager.wasm"
-
+    local PATH_TO_CONTRACT="$_PATH_TO_DEMO/assets/contract_keys_manager.wasm"
+    
     DEPLOY_HASH=$(
         $_PATH_TO_CLIENT put-deploy \
             --chain-name "casper-net-1" \
@@ -39,8 +39,7 @@ function _set_key_weight_of_user()
 
     local USER_ACCOUNT_KEY=$(get_account_key "$NCTL_ACCOUNT_TYPE_USER" "$USER_ID")
     local USER_ACCOUNT_HASH=$(get_account_hash "$USER_ACCOUNT_KEY")
-
-    local PATH_TO_CONTRACT=$(get_path_to_contract "eco/keys-manager.wasm")
+    local PATH_TO_CONTRACT="$_PATH_TO_DEMO/assets/contract_keys_manager.wasm"
 
     DEPLOY_HASH=$(
         $_PATH_TO_CLIENT put-deploy \
@@ -79,5 +78,4 @@ function _main()
     echo "-----------------------------------------------------------------------------------------------------------"
 }
 
-_demo_set_contracts
 _main

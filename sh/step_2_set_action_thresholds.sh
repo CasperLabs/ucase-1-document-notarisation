@@ -1,4 +1,4 @@
-_NODE_ADDRESS=$(get_node_address_rpc)
+_NODE_ADDRESS=$(get_node_address_rpc node="1")
 _PATH_TO_CLIENT=$(get_path_to_client)
 _SYSTEM_SECRET_KEY=$(get_path_to_secret_key "$NCTL_ACCOUNT_TYPE_FAUCET")
 
@@ -8,7 +8,7 @@ function _set_action_threshold()
     local ACTION_TYPE=${1}
     local ACTION_WEIGHT=${2}
     local ACTION="set_$ACTION_TYPE""_threshold"
-    local PATH_TO_CONTRACT="$_PATH_TO_DEMO/assets/contract-keys-manager.wasm"
+    local PATH_TO_CONTRACT="$_PATH_TO_DEMO/assets/contract_keys_manager.wasm"
 
     DEPLOY_HASH=$(
         $_PATH_TO_CLIENT put-deploy \
@@ -30,7 +30,6 @@ function _set_action_threshold()
     echo "... deploy-hash = $DEPLOY_HASH"
 }
 
-
 function _main()
 {
     echo "-----------------------------------------------------------------------------------------------------------"
@@ -40,5 +39,4 @@ function _main()
     echo "-----------------------------------------------------------------------------------------------------------"
 }
 
-_demo_set_contracts
 _main

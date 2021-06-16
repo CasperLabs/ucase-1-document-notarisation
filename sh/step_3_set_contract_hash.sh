@@ -1,16 +1,21 @@
-_NODE_ADDRESS=$(get_node_address_rpc)
+_NODE_ADDRESS=$(get_node_address_rpc node="1")
+_PATH_TO_CLIENT=$(get_path_to_client)
 
 
 function _main() 
 {
-    local PATH_TO_CONTRACT_HASH="$_PATH_TO_DEMO/assets/contract-hash"
+    local PATH_TO_CONTRACT_HASH="$_PATH_TO_DEMO/outputs/contract-hash"
 
     if [ -f "$PATH_TO_CONTRACT_HASH" ]; then
         rm "$PATH_TO_CONTRACT_HASH"
     fi
 
+    log "querying chain ..."
+    sleep 0.3
+
     local _ACCOUNT_KEY=$(get_account_key "$NCTL_ACCOUNT_TYPE_FAUCET")
     local _STATE_ROOT_HASH=$(get_state_root_hash)
+
     local _CONTRACT_HASH=$(
         $_PATH_TO_CLIENT query-state \
             --node-address "$_NODE_ADDRESS" \

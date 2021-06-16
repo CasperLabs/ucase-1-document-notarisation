@@ -1,12 +1,11 @@
-. $NCTL/sh/views/utils.sh
-
 _ACCOUNT_KEY=$(get_account_key "$NCTL_ACCOUNT_TYPE_USER" "3")
-_ACCOUNT_HASH=$(get_account_hash "$ACCOUNT_KEY")
+_ACCOUNT_HASH=$(get_account_hash "$_ACCOUNT_KEY")
 _STATE_ROOT_HASH=$(get_state_root_hash)
 
 echo "-----------------------------------------------------------------------------------------------------------"
-echo "system a/c key           : $_ACCOUNT_KEY"
-echo "system a/c hash          : $_ACCOUNT_HASH"
+echo "Account D = Partner"
+echo "a/c key  : $_ACCOUNT_KEY"
+echo "a/c hash : $_ACCOUNT_HASH"
 echo "-----------------------------------------------------------------------------------------------------------"
 
 source "$NCTL"/sh/views/view_chain_account.sh \

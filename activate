@@ -3,34 +3,43 @@
 # Set here.
 export _PATH_TO_DEMO="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-alias aibc-2021-step-1-set-document-checksum='source $_PATH_TO_DEMO/step_1_set_document_checksum.sh'
-alias aibc-2021-step-1-set-document-metadata='source $_PATH_TO_DEMO/step_1_set_document_metadata.sh'
+# Step 1 commands.
+alias aibc-2021-step-1-set-document-checksum='source $_PATH_TO_DEMO/sh/step_1_set_document_checksum.sh'
+alias aibc-2021-step-1-set-document-metadata='source $_PATH_TO_DEMO/sh/step_1_set_document_metadata.sh'
 
-alias aibc-2021-step-1-view-document-metadata='source $_PATH_TO_DEMO/step_1_view_document_metadata.sh'
-alias aibc-2021-step-2-set-associated-keys='source $_PATH_TO_DEMO/step_2_set_key_weights.sh'
-alias aibc-2021-step-2-set-action-thresholds='source $_PATH_TO_DEMO/step_2_set_action_thresholds.sh'
+# Step 2 commands.
+alias aibc-2021-step-2-set-key-weights='source $_PATH_TO_DEMO/sh/step_2_set_key_weights.sh'
+alias aibc-2021-step-2-set-action-thresholds='source $_PATH_TO_DEMO/sh/step_2_set_action_thresholds.sh'
 
-alias aibc-2021-step-3-set-contract='source $_PATH_TO_DEMO/step_3_set_contract.sh'
-alias aibc-2021-step-3-set-contract-hash='source $_PATH_TO_DEMO/step_3_set_contract_hash.sh'
+# Step 3 commands.
+alias aibc-2021-step-3-set-contract='source $_PATH_TO_DEMO/sh/step_3_set_contract.sh'
+alias aibc-2021-step-3-set-contract-hash='source $_PATH_TO_DEMO/sh/step_3_set_contract_hash.sh'
 
-alias aibc-2021-step-4-set-deploy-1='source $_PATH_TO_DEMO/step_4_set_deploy_1.sh'
-alias aibc-2021-step-4-set-deploy-2='source $_PATH_TO_DEMO/step_4_set_deploy_2.sh'
-alias aibc-2021-step-4-set-deploy-3='source $_PATH_TO_DEMO/step_4_set_deploy_3.sh'
+# Step 4 commands.
+alias aibc-2021-step-4-set-notarisation-1='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_1.sh'
+alias aibc-2021-step-4-set-notarisation-2='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_2.sh'
+alias aibc-2021-step-4-set-notarisation-3='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_3.sh'
 
-alias aibc-2021-step-5-dispatch-deploy-1='source $_PATH_TO_DEMO/step_5_dispatch_deploy_1.sh'
-alias aibc-2021-step-5-dispatch-deploy-2='source $_PATH_TO_DEMO/step_5_dispatch_deploy_2.sh'
-alias aibc-2021-step-5-dispatch-deploy-3='source $_PATH_TO_DEMO/step_5_dispatch_deploy_3.sh'
+# Step 5 commands.
+alias aibc-2021-step-5-dispatch-notarisation-1='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_1.sh'
+# alias aibc-2021-step-5-dispatch-notarisation-2='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_2.sh'
+# alias aibc-2021-step-5-dispatch-notarisation-3='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_3.sh'
 
-alias aibc-2021-step-6-verify-metadata='source $_PATH_TO_DEMO/step_6_verify_published_metadata.sh'
+# Step 6 commands.
+alias aibc-2021-step-6-verify-metadata='source $_PATH_TO_DEMO/sh/step_6_verify_published_metadata.sh'
 
-alias aibc-2021-view-account-A='source $_PATH_TO_DEMO/view_account_a.sh'
-alias aibc-2021-view-account-B='source $_PATH_TO_DEMO/view_account_b.sh'
-alias aibc-2021-view-account-C='source $_PATH_TO_DEMO/view_account_c.sh'
-alias aibc-2021-view-account-D='source $_PATH_TO_DEMO/view_account_d.sh'
+# Views.
+alias aibc-2021-view-accounts='source $_PATH_TO_DEMO/sh/view_accounts.sh'
+alias aibc-2021-view-account-a='source $_PATH_TO_DEMO/sh/view_account_a.sh'
+alias aibc-2021-view-account-b='source $_PATH_TO_DEMO/sh/view_account_b.sh'
+alias aibc-2021-view-account-c='source $_PATH_TO_DEMO/sh/view_account_c.sh'
+alias aibc-2021-view-account-d='source $_PATH_TO_DEMO/sh/view_account_d.sh'
+alias aibc-2021-view-contract-state='source $_PATH_TO_DEMO/sh/view_contract_state.sh'
+alias aibc-2021-view-document-metadata='source $_PATH_TO_DEMO/sh/view_document_metadata.sh'
+alias aibc-2021-view-notarisation-1='source $_PATH_TO_DEMO/sh/view_notarisation_1.sh'
+alias aibc-2021-view-notarisation-2='source $_PATH_TO_DEMO/sh/view_notarisation_2.sh'
+alias aibc-2021-view-notarisation-3='source $_PATH_TO_DEMO/sh/view_notarisation_3.sh'
 
-if [ ! -f "$NCTL/assets/net-1/bin/eco/kv-storage.wasm" ]; then
-    echo "WARNING :: kv-storage.wasm is unstalled"
-fi
-if [ ! -f "$NCTL/assets/net-1/bin/eco/keys-manager.wasm" ]; then
-    echo "WARNING :: keys-manager.wasm is unstalled"
+if [ ! -d "$_PATH_TO_DEMO/outputs" ]; then
+    mkdir "$_PATH_TO_DEMO/outputs"
 fi

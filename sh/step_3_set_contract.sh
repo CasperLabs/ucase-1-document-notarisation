@@ -1,11 +1,11 @@
-_NODE_ADDRESS=$(get_node_address_rpc)
+_NODE_ADDRESS=$(get_node_address_rpc node="1")
 _PATH_TO_CLIENT=$(get_path_to_client)
 _SYSTEM_SECRET_KEY=$(get_path_to_secret_key "$NCTL_ACCOUNT_TYPE_FAUCET")
 
 
 function _main() 
 {
-    local PATH_TO_CONTRACT="$_PATH_TO_DEMO/assets/contract-kv-storage.wasm"
+    local PATH_TO_CONTRACT="$_PATH_TO_DEMO/assets/contract_kv_storage.wasm"
 
     DEPLOY_HASH=$(
         $_PATH_TO_CLIENT put-deploy \
@@ -19,13 +19,12 @@ function _main()
             | jq '.result.deploy_hash' \
             | sed -e 's/^"//' -e 's/"$//'
         )
-    
+
     echo "-----------------------------------------------------------------------------------------------------------"
-    echo "installing contract -> kv-storage.wasm"
+    echo "installing contract -> kv_storage.wasm"
     echo "... path = $PATH_TO_CONTRACT"
     echo "... deploy hash = $DEPLOY_HASH"
     echo "-----------------------------------------------------------------------------------------------------------"
 }
 
-_demo_set_contracts
 _main
