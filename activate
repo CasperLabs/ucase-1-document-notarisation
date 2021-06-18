@@ -4,41 +4,41 @@
 export _PATH_TO_DEMO="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Step 1 commands.
-alias aibc-2021-step-1-set-document-checksum='source $_PATH_TO_DEMO/sh/step_1_set_document_checksum.sh'
-alias aibc-2021-step-1-set-document-metadata='source $_PATH_TO_DEMO/sh/step_1_set_document_metadata.sh'
+alias ucase-1-step-1-set-document-checksum='source $_PATH_TO_DEMO/sh/step_1_set_document_checksum.sh'
+alias ucase-1-step-1-set-document-metadata='source $_PATH_TO_DEMO/sh/step_1_set_document_metadata.sh'
 
 # Step 2 commands.
-alias aibc-2021-step-2-set-key-weights='source $_PATH_TO_DEMO/sh/step_2_set_key_weights.sh'
-alias aibc-2021-step-2-set-action-thresholds='source $_PATH_TO_DEMO/sh/step_2_set_action_thresholds.sh'
+alias ucase-1-step-2-set-key-weights='source $_PATH_TO_DEMO/sh/step_2_set_key_weights.sh'
+alias ucase-1-step-2-set-action-thresholds='source $_PATH_TO_DEMO/sh/step_2_set_action_thresholds.sh'
 
 # Step 3 commands.
-alias aibc-2021-step-3-set-contract='source $_PATH_TO_DEMO/sh/step_3_set_contract.sh'
-alias aibc-2021-step-3-set-contract-hash='source $_PATH_TO_DEMO/sh/step_3_set_contract_hash.sh'
+alias ucase-1-step-3-set-contract='source $_PATH_TO_DEMO/sh/step_3_set_contract.sh'
+alias ucase-1-step-3-set-contract-hash='source $_PATH_TO_DEMO/sh/step_3_set_contract_hash.sh'
 
 # Step 4 commands.
-alias aibc-2021-step-4-set-notarisation-1='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_1.sh'
-alias aibc-2021-step-4-set-notarisation-2='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_2.sh'
-alias aibc-2021-step-4-set-notarisation-3='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_3.sh'
+alias ucase-1-step-4-set-notarisation-1='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_1.sh'
+alias ucase-1-step-4-set-notarisation-2='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_2.sh'
+alias ucase-1-step-4-set-notarisation-3='source $_PATH_TO_DEMO/sh/step_4_set_notarisation_3.sh'
 
 # Step 5 commands.
-alias aibc-2021-step-5-dispatch-notarisation-1='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_1.sh'
-# alias aibc-2021-step-5-dispatch-notarisation-2='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_2.sh'
-# alias aibc-2021-step-5-dispatch-notarisation-3='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_3.sh'
+alias ucase-1-step-5-dispatch-notarisation-1='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_1.sh'
+# alias ucase-1-step-5-dispatch-notarisation-2='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_2.sh'
+# alias ucase-1-step-5-dispatch-notarisation-3='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_3.sh'
 
 # Step 6 commands.
-alias aibc-2021-step-6-verify-metadata='source $_PATH_TO_DEMO/sh/step_6_verify_published_metadata.sh'
+alias ucase-1-step-6-verify-metadata='source $_PATH_TO_DEMO/sh/step_6_verify_published_metadata.sh'
 
 # Views.
-alias aibc-2021-view-accounts='source $_PATH_TO_DEMO/sh/view_accounts.sh'
-alias aibc-2021-view-account-a='source $_PATH_TO_DEMO/sh/view_account_a.sh'
-alias aibc-2021-view-account-b='source $_PATH_TO_DEMO/sh/view_account_b.sh'
-alias aibc-2021-view-account-c='source $_PATH_TO_DEMO/sh/view_account_c.sh'
-alias aibc-2021-view-account-d='source $_PATH_TO_DEMO/sh/view_account_d.sh'
-alias aibc-2021-view-contract-state='source $_PATH_TO_DEMO/sh/view_contract_state.sh'
-alias aibc-2021-view-document-metadata='source $_PATH_TO_DEMO/sh/view_document_metadata.sh'
-alias aibc-2021-view-notarisation-1='source $_PATH_TO_DEMO/sh/view_notarisation_1.sh'
-alias aibc-2021-view-notarisation-2='source $_PATH_TO_DEMO/sh/view_notarisation_2.sh'
-alias aibc-2021-view-notarisation-3='source $_PATH_TO_DEMO/sh/view_notarisation_3.sh'
+alias ucase-1-view-accounts='source $_PATH_TO_DEMO/sh/view_accounts.sh'
+alias ucase-1-view-account-a='source $_PATH_TO_DEMO/sh/view_account_a.sh'
+alias ucase-1-view-account-b='source $_PATH_TO_DEMO/sh/view_account_b.sh'
+alias ucase-1-view-account-c='source $_PATH_TO_DEMO/sh/view_account_c.sh'
+alias ucase-1-view-account-d='source $_PATH_TO_DEMO/sh/view_account_d.sh'
+alias ucase-1-view-contract-state='source $_PATH_TO_DEMO/sh/view_contract_state.sh'
+alias ucase-1-view-document-metadata='source $_PATH_TO_DEMO/sh/view_document_metadata.sh'
+alias ucase-1-view-notarisation-1='source $_PATH_TO_DEMO/sh/view_notarisation_1.sh'
+alias ucase-1-view-notarisation-2='source $_PATH_TO_DEMO/sh/view_notarisation_2.sh'
+alias ucase-1-view-notarisation-3='source $_PATH_TO_DEMO/sh/view_notarisation_3.sh'
 
 if [ ! -d "$_PATH_TO_DEMO/outputs" ]; then
     mkdir "$_PATH_TO_DEMO/outputs"
