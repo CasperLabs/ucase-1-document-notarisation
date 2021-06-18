@@ -1,5 +1,5 @@
 
-function _set_document_checksum()
+function _main()
 {
     if [ -f "$_PATH_TO_DEMO/outputs/document-checksum" ]; then
         rm "$_PATH_TO_DEMO/outputs/document-checksum"
@@ -18,4 +18,4 @@ EOM
     echo "-----------------------------------------------------------------------------------------------------------"
 }
 
-_set_document_checksum
+_main

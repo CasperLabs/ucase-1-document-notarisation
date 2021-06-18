@@ -1,4 +1,4 @@
-function _set_document_metadata()
+function _main()
 {
     if [ -f "$_PATH_TO_DEMO/outputs/document-metadata" ]; then
         rm "$_PATH_TO_DEMO/outputs/document-metadata"
@@ -16,4 +16,4 @@ EOM
     less "$_PATH_TO_DEMO/outputs/document-metadata"
 }
 
-_set_document_metadata
+_main

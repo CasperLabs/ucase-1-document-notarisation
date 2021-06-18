@@ -7,7 +7,7 @@
 nctl-assets-setup && nctl-start
 
 # Step 0.2: Await for network to spinup.
-nctl-view-chain-state-root-hash 
+nctl-view-chain-state-root-hash
 
 # Step 0.3: Display accounts.
 aibc-2021-view-accounts

@@ -1,8 +1,8 @@
-function _view_document_metadata()
+function _main()
 {
     echo "---------------------------------------------------------------------------------"
     cat "$_PATH_TO_DEMO/outputs/document-metadata"
     echo "---------------------------------------------------------------------------------"
 }
 
-_view_document_metadata
+_main
