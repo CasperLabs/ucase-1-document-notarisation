@@ -28,9 +28,11 @@ ucase-1-step-1-set-document-metadata
 
 # Step 02.1: Set system account key weights - wait until pending deploys = 0.
 ucase-1-step-2-set-key-weights
+sleep 10.0
 
 # Step 02.2: Set system account action thresholds - wait until pending deploys = 0.
 ucase-1-step-2-set-action-thresholds
+sleep 10.0
 
 # Step 02.3: Display system account information - note updated key weights.
 ucase-1-view-account-a
@@ -71,8 +73,14 @@ ucase-1-view-notarisation-3
 # Step 05: Dispatch notarisation to chain.
 # ---------------------------------------------------------------------------
 
-# Step 05.1: Dispatch notarisation.
+# Step 05.1: Dispatch notarisation - should fail.
 ucase-1-step-5-dispatch-notarisation-1
+
+# Step 05.2: Dispatch notarisation - should fail.
+ucase-1-step-5-dispatch-notarisation-2
+
+# Step 05.3: Dispatch notarisation.
+ucase-1-step-5-dispatch-notarisation-3
 
 # ---------------------------------------------------------------------------
 # Step 06: Verify on-chain metadata.

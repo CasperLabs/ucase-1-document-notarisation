@@ -1,4 +1,3 @@
-
 function _main()
 {
     if [ -f "$_PATH_TO_DEMO/outputs/document-checksum" ]; then
