@@ -22,8 +22,8 @@ alias ucase-1-step-4-set-notarisation-3='source $_PATH_TO_DEMO/sh/step_4_set_not
 
 # Step 5 commands.
 alias ucase-1-step-5-dispatch-notarisation-1='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_1.sh'
-# alias ucase-1-step-5-dispatch-notarisation-2='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_2.sh'
-# alias ucase-1-step-5-dispatch-notarisation-3='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_3.sh'
+alias ucase-1-step-5-dispatch-notarisation-2='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_2.sh'
+alias ucase-1-step-5-dispatch-notarisation-3='source $_PATH_TO_DEMO/sh/step_5_dispatch_notarisation_3.sh'
 
 # Step 6 commands.
 alias ucase-1-step-6-verify-metadata='source $_PATH_TO_DEMO/sh/step_6_verify_published_metadata.sh'
